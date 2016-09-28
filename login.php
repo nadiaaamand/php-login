@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include 'db-connection.php';
-
+//connects to database and looks to see if username or password is right or wrong
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
 

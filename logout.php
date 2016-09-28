@@ -3,6 +3,6 @@ session_start();
 session_destroy();
 
 header("Location: index.php")
-
+// session is getting destroyed
 
 ?>

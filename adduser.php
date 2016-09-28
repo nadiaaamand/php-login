@@ -1,10 +1,13 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-</head>
+<?php 
+include 'db-connection.php';
 
-<body> 
-</body>
-</html>
+$first = $_POST['first'];
+$last = $_POST['last'];
+$uid = $_POST['uid'];
+$pwd = $_POST['pwd'];
+
+echo $first;
+echo $last;
+echo $uid;
+echo $pwd;
+?>

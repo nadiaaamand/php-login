@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include 'db-connection.php';
 
 $first = $_POST['first'];

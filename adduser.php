@@ -7,7 +7,8 @@ $last = $_POST['last'];
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
 
-$sql = "INSERT INTO user (first, last, uid, pwd) VALUES ('$first', '$last', '$uid', '$pwd')";
+$enc_pwd = password_hash($pwd, PASSWORD_DEFAULT);
+$sql = "INSERT INTO user (first, last, uid, pwd) VALUES ('$first', '$last', '$uid', '$enc_pwd')";
 
 $result = mysqli_query($conn, $sql);
 

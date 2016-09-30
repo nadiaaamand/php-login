@@ -16,7 +16,7 @@ $curpage = basename ($_SERVER['PHP_SELF']);
 <header>
 	<nav>
 		<ul>
-			<li><a href="index.php" <?php if($curpage == 'index.php') {echo 'class="active"';}?>>Home</a></li>
+			<li><a href="index-loggedin.php" <?php if($curpage == 'index-loggedin.php') {echo 'class="active"';}?>>Home</a></li>
             <?php 
 			//Calling for the user id - if you are logged in you will see the id, if not you will get the 					           else message
 			if (isset($_SESSION['ID'])) {
@@ -35,7 +35,7 @@ $curpage = basename ($_SERVER['PHP_SELF']);
 			
 			?>
             <li><a href="secretpage.php" <?php if($curpage == 'secretpage.php') {echo 'class="active"';}?>>User</a></li>
-            <li><a href="adduser-page.php" <?php if($curpage == 'adduser-page.php') {echo 'class="active"';}?>>Sign Up</a></li>
+            <li><a href="adduser-page-secret.php" <?php if($curpage == 'adduser-page-secret.php') {echo 'class="active"';}?>>Sign Up</a></li>
 		</ul>
 
 	</nav>

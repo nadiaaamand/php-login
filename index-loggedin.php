@@ -1,5 +1,5 @@
 <?php 
-	include 'header.php';
+	include 'header-secret.php';
 ?>
 
 <body> 
@@ -9,7 +9,7 @@
 //Calling for the user id - if you are logged in you will see the id, if not you will get the else message
 	if (isset($_SESSION['ID'])) {
 		echo '<h1>';
-		echo "You are logged in <br><br> If you want to log out you should press the button 'Log out'";
+		echo "You are already logged in. <br><br> If you want to log out you should press the button 'Log out'";
 		echo '</h1>';
 		} else {
 			echo '<h1>';

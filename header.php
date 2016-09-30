@@ -1,5 +1,8 @@
 <?php 
 session_start();
+
+$curpage = basename ($_SERVER['PHP_SELF']);
+//Using this cause you can't use a class directly since the class is on all pages - instead I have used an if statement --> if the current page is e.g. p5 the echo (show) that the class active. The $_server is a super global variable which holds information about header, locations.
 ?>
 <!doctype html>
 <html>
@@ -13,25 +16,25 @@ session_start();
 <header>
 	<nav>
 		<ul>
-			<li><a href="index.php">Home</a></li>
+			<li><a href="index.php" <?php if($curpage == 'index.php') {echo 'class="active"';}?>>Home</a></li>
             <?php 
 			//Calling for the user id - if you are logged in you will see the id, if not you will get the 					           else message
 			if (isset($_SESSION['ID'])) {
 			//log out form. redirects to the logout.php where it destroyes the session
-			echo "<form action='logout.php'>
+			echo "<form class='logout' action='logout.php'>
 	 		<button>Log out</button>
 			</form>";
 			} else {
-				echo "<form  action='login.php' method='POST'>
-				<input type='text' name='uid' placeholder='Username'>
-    			<input type='password' name='pwd' placeholder='Password'>
+				echo "<form action='login.php' method='POST'>
+				<input type='text' name='uid' placeholder='Username' required>
+    			<input type='password' name='pwd' placeholder='Password' required>
    				<button type='submit' >Log in</button>
 				 </form>";
 				}
 			//Log in form, using POST so it wont be visible in the browser
 			
 			?>
-            <li><a href="adduser-page.php">Sign up</a></li>
+            <li><a href="adduser-page.php" <?php if($curpage == 'adduser-page.php') {echo 'class="active"';}?>>Sign up</a></li>
 		</ul>
 
 	</nav>

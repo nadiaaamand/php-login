@@ -23,6 +23,6 @@ if (!$row = mysqli_fetch_assoc($result)) {
 		$_SESSION['ID'] = $row['ID'];
 		} 
 
-header("Location: index.php");
+header("Location: secretpage.php");
 }
 ?>

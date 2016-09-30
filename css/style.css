@@ -9,7 +9,7 @@
 header {
 	width: 100%;
 	height: 60px;
-	background-color: #343434; 
+	background-color: #EDEDED; 
 	
 	}
 nav ul {
@@ -26,9 +26,14 @@ nav ul li {
 	
 nav ul li a {
 	color: white;
-	font-family: arial, sans-serif;
+	font-family:helvetica, arial, sans-serif;
 	font-size: 16px;
-	
+	border: 10px solid #914E57;
+	background-color: #914E57;
+	}
+li a:hover {
+	background-color: #B2808E;
+	border: 10px solid #B2808E;
 	}
 	
 nav ul form {

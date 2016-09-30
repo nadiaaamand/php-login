@@ -8,7 +8,7 @@
 //Calling for the user id - if you are logged in you will see the id, if not you will get the else message
 	if (isset($_SESSION['ID'])) {
 		echo '<h1>';
-		echo "Thank you!";
+		echo "Hey!";
 		echo '</h1>';
 		} else {
 			echo '<h1>';

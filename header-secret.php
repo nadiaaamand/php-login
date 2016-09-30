@@ -34,6 +34,7 @@ $curpage = basename ($_SERVER['PHP_SELF']);
 			//Log in form, using POST so it wont be visible in the browser
 			
 			?>
+            <li><a href="secretpage.php" <?php if($curpage == 'secretpage.php') {echo 'class="active"';}?>>User</a></li>
             <li><a href="adduser-page.php" <?php if($curpage == 'adduser-page.php') {echo 'class="active"';}?>>Sign Up</a></li>
 		</ul>
 

@@ -13,7 +13,7 @@
 		echo '</h1>';
 		} else {
 			echo '<h1>';
-			echo "Hey! Please sign in or sign up.";
+			echo "Hey! Please sign in or sign up!";
 			echo '</h1>';
 		}
 ?>
